@@ -1,0 +1,50 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-icons/src/br-icons.html">
+<link rel="import" type="html" href="../../br-button/src/br-button.html">
+
+<dom-module id="br-modal">
+<link rel="import" type="css" href="../dist/css/br-modal.css">
+<template>
+
+  <div aria-hidden="true" class="modal">
+    <header class="modal-header">
+      <div class="controls">
+        <button on-click="_close">
+          <br-icons icon="br-icons:close"></br-icons>
+        </button>
+      </div>
+    </header>
+    <content>
+      <div class="modal-body">
+        <div class="modal-icon">
+          <br-icons icon="br-icons:check"></br-icons>
+        </div>
+        <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
+      </div>
+    </content>
+    <footer class="modal-footer">
+      <br-button class="small primary" label="Got it!"></br-button>
+    </footer>
+  </div>
+</template>
+<script>
+  Polymer({
+   is: 'br-modal',
+      /*ready: function(){
+        var brModal = Polymer.dom(this);
+
+        document.addEventListener('click', function() {
+          if (brModal.classList.contains('open') && brModal.classList !== null)
+            brModal.classList.remove('open');
+        }, false);
+        
+        function modalClickShow(){
+          
+          document.getElementsByTagName('br-modal')
+
+        }
+
+      }*/
+    });
+</script>
+</dom-module>
