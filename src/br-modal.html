@@ -14,37 +14,41 @@
         </button>
       </div>
     </header>
-    <content>
-      <div class="modal-body">
-        <div class="modal-icon">
-          <br-icons icon="br-icons:check"></br-icons>
-        </div>
-        <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
-      </div>
-    </content>
-    <footer class="modal-footer">
-      <br-button class="small primary" label="Got it!"></br-button>
-    </footer>
+    <div class="modal-body">
+      <content select=".body">
+      </content>
+    </div>
+    <div class="modal-footer">
+      <content select=".footer">
+      </content>
+    </div>
   </div>
 </template>
+
 <script>
   Polymer({
-   is: 'br-modal',
-      /*ready: function(){
-        var brModal = Polymer.dom(this);
+    is: 'br-modal',
 
-        document.addEventListener('click', function() {
-          if (brModal.classList.contains('open') && brModal.classList !== null)
-            brModal.classList.remove('open');
-        }, false);
-        
-        function modalClickShow(){
-          
-          document.getElementsByTagName('br-modal')
+    properties: {
 
-        }
+    },
 
-      }*/
-    });
+    ready: function(){
+      var brModal = Polymer.dom(this);
+
+      document.addEventListener('click', function() {
+        if (brModal.classList.contains('open') && brModal.classList !== null)
+          brModal.classList.remove('open');
+      }, false);
+
+      function modalClickShow(){
+
+        document.getElementsByTagName('br-modal')
+
+      }
+
+    }
+  });
 </script>
+
 </dom-module>
