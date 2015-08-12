@@ -1,5 +1,4 @@
 <link rel="import" type="html" href="../../polymer/polymer.html">
-<link rel="import" type="html" href="../../br-icons/src/br-icons.html">
 <link rel="import" type="html" href="../../br-button/src/br-button.html">
 
 <dom-module id="br-modal">
@@ -15,7 +14,7 @@
       </div>
     </header>
     <div class="modal-body">
-      <content select=".body">
+      <content id="body" select=".body">
       </content>
     </div>
     <div class="modal-footer">
@@ -29,25 +28,13 @@
   Polymer({
     is: 'br-modal',
 
-    properties: {
-
-    },
-
-    ready: function(){
-      var brModal = Polymer.dom(this);
-
-      document.addEventListener('click', function() {
-        if (brModal.classList.contains('open') && brModal.classList !== null)
-          brModal.classList.remove('open');
-      }, false);
-
-      function modalClickShow(){
-
-        document.getElementsByTagName('br-modal')
-
-      }
-
+    openModal: function(){
+        this.className = " open";
+      },
+    closeModal: function(){
+      Polymer.dom(this).classList.remove('open');
     }
+
   });
 </script>
 

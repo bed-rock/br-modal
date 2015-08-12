@@ -28,7 +28,6 @@
     width: 100%;
     max-width: $screen-tablet;
     max-height: 100%;
-    padding: 1rem;
     background-color: $body-bg;
     border-radius: 0.2rem;
     border: 2px solid $color-white-10;
@@ -72,30 +71,14 @@
     flex-grow: 1;
     overflow-y: auto;
     text-align: center;
-
-    p {
-      margin: 0 5% 1rem;
-    }
-
-    .modal-icon {
-      margin: 2rem;
-
-      br-icons {
-        border: 0.15rem solid;
-        padding: 1rem;
-        border-radius: $border-radius-large;
-        color: $color-white-20;
-      }
-    }
-
+    padding: 1rem;
   }
 
   .modal-footer {
-    br-button {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
   }
 }
 
