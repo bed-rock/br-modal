@@ -4,7 +4,6 @@
 <dom-module id="br-modal">
 <link rel="import" type="css" href="../dist/css/br-modal.css">
 <template>
-
   <div aria-hidden="true" class="modal">
     <header class="modal-header">
       <div class="controls">
@@ -28,11 +27,11 @@
   Polymer({
     is: 'br-modal',
 
-    openModal: function(){
-        this.className = " open";
-      },
-    closeModal: function(){
-      Polymer.dom(this).classList.remove('open');
+    _open: function(){
+      this.classList.add("open");
+    },
+    _close: function(){
+      this.classList.remove('open');
     }
 
   });
