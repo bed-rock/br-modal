@@ -1,6 +1,6 @@
 {
   "name": "br-modal",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "authors": [
     "cbfranca <cleidsonbf@gmail.com>",
     "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
@@ -22,6 +22,6 @@
     "tests"
   ],
    "dependencies": {
-    "bedrock-base": "*"
+    "bedrock-base": "~1.0.0"
   }
 }
