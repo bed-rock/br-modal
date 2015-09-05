@@ -11,10 +11,27 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
   <!-- Web Components -->
+  <link rel="import" type="html" href="../../polymer/polymer.html">
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../src/br-modal.html">
 </head>
 <body>
+
+<!--
+Usage:
+Tag:
+  <br-modal>
+    <div class="body">Modal Body < /div>
+    <div class="footer">Modal Footer < /div>
+  < /br-modal>
+Attributes:
+  model: Type: Array
+  options: Type: Array
+  Required: Type: Boolean
+  multiselect: Type: Boolean
+  Desription: Set if br-selectbox is multiselect.
+  Default value: false
+-->
 
   <a href="#" onclick="document.querySelector('br-modal')._open()">Click me!</a>
 
@@ -23,7 +40,7 @@
       <div class="modal-icon">
         <br-icons icon="br-icons:check"></br-icons>
       </div>
-      <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>  
+      <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
     </div>
     <div class="footer">
       <br-button class="small primary" onclick="document.querySelector('br-modal')._close()" label="Got it!"></br-button>
