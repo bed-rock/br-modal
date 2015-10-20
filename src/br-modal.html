@@ -6,7 +6,7 @@
   <div aria-hidden="true" class="modal">
     <header class="modal-header">
       <div class="controls">
-        <button on-click="_close">
+        <button on-click="close">
           <br-icons icon="br-icons:close"></br-icons>
         </button>
       </div>
@@ -26,10 +26,10 @@
   Polymer({
     is: 'br-modal',
 
-    _open: function(){
+    open: function(){
       this.classList.add("open");
     },
-    _close: function(){
+    close: function(){
       this.classList.remove('open');
     }
 
