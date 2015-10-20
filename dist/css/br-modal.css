@@ -55,7 +55,7 @@
 }
 :host .modal-header {
   background-color: #e6e6e6;
-  height: 2.5rem;
+  height: 3rem;
 }
 :host .controls {
   display: -webkit-flex;
@@ -67,8 +67,8 @@
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: 3rem;
+  line-height: 3rem;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -87,7 +87,6 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow-y: auto;
-  text-align: center;
   padding: 1rem;
 }
 :host .modal-footer {
