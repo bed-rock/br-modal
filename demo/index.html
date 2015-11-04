@@ -14,6 +14,8 @@
   <link rel="import" type="html" href="../../polymer/polymer.html">
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../src/br-modal.html">
+  <link rel="import" href="../../br-input/src/br-input.html">
+  <link rel="import" href="../../br-button/src/br-button.html">
 </head>
 <body>
 
@@ -35,15 +37,13 @@ Attributes:
 
   <a href="#" onclick="document.querySelector('br-modal').open()">Click me!</a>
 
-  <br-modal>
-    <div class="body">
-      <div class="modal-icon">
-        <br-icons icon="br-icons:check"></br-icons>
-      </div>
+  <br-modal title="Título do modal">
+    <div class="modal--body">
       <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
     </div>
-    <div class="footer">
-      <br-button class="small primary" onclick="document.querySelector('br-modal').close()" label="Got it!"></br-button>
+    <div class="modal--footer">
+      <br-button label="Cancel" color="default" block onclick="document.querySelector('br-modal').close()"></br-button>
+      <br-button label="Save" color="primary" block onclick="document.querySelector('br-modal').close()"></br-button>
     </div>
   </br-modal>
 
