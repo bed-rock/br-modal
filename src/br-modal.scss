@@ -3,7 +3,6 @@
 
 :host {
   position: fixed;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -11,20 +10,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  user-select: none;
   box-sizing: border-box;
   opacity: 0;
+  visibility: hidden;
   background: rgba(#000,0.7);
+  user-select: none;
 
   animation-duration: 0.6s;
   animation-fill-mode: both;
+  will-change: transform, opacity;
 
   &.open {
+    visibility: visible;
     animation-name: fadeIn;
-    z-index: 999;
   }
 
   &.close {
+    visibility: visible;
     animation-name: fadeOut;
   }
 
@@ -42,6 +44,7 @@
 
   animation-duration: 0.6s;
   animation-fill-mode: both;
+  will-change: transform, opacity;
 
   :host.open & {
     animation-name: fadeInDown;
@@ -68,20 +71,15 @@
   display: table;
   flex-shrink: 0;
   width: 100%;
-  border-spacing: 1rem .5rem;
   background-color: $color-white-10;
-  text-align: right;
-}
+  border-spacing: .5rem .5rem;
 
-// @media (max-width: $screen-tablet) {
-//   ::content .modal--footer {
-//     > * {
-//       display: table-cell;
-//       width: 50%;
-//       vertical-align: middle;
-//     }
-//   }
-// }
+  > * {
+    display: table-cell;
+    width: 50%;
+  }
+
+}
 
 // Modal animate
 //
@@ -100,6 +98,7 @@
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -107,12 +106,10 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -123,7 +120,7 @@
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
+    visibility: hidden;
   }
 }
