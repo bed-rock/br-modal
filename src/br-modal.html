@@ -40,6 +40,10 @@
       'tap': 'onTapElement'
     },
 
+    ready: function {
+      this.classList('modal');
+    },
+
     onTapElement: function(e) {
       if ( e.target == this )
         this.close();
