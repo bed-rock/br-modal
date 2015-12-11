@@ -6,9 +6,9 @@
 
 <template>
 
-  <div aria-hidden="true" class="modal">
+  <div class="modal--content">
 
-    <br-header class="controls">
+    <br-header class="modal--content--header  controls">
       <div class="group__left">
         <span class="header--title">{{title}}</span>
       </div>
@@ -26,6 +26,7 @@
     </content>
 
   </div>
+
 </template>
 
 <script>
@@ -40,8 +41,8 @@
       'tap': 'onTapElement'
     },
 
-    ready: function {
-      this.classList('modal');
+    ready: function() {
+      this.classList.add('modal');
     },
 
     onTapElement: function(e) {

@@ -39,7 +39,7 @@
           animation-name: fadeOut;
 }
 
-.modal {
+.modal--content {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -58,16 +58,16 @@
           animation-fill-mode: both;
   will-change: transform, opacity;
 }
-:host.open .modal {
+:host.open .modal--content {
   -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
 }
-:host.close .modal {
+:host.close .modal--content {
   -webkit-animation-name: fadeOutUp;
           animation-name: fadeOutUp;
 }
 @media (min-width: 992px) {
-  .modal {
+  .modal--content {
     width: 942px;
     height: auto;
   }
